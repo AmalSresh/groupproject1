@@ -19,6 +19,10 @@ def gen_rand_arr():
         result_box.delete(0, tk.END)
         #turn it into a string so user can add more to the array if they want
         result_box.insert(0, str(random_array)) 
+        
+        for i in range(0, len(random_array)):
+            random_array[i] = int(random_array)
+        
     except ValueError:
         # Handle the case where the user input is not a valid integer
         result_box.delete(0, tk.END)
